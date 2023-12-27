@@ -69,7 +69,14 @@ const Home = (props) => {
         <Text fontSize={"4xl"} fontWeight={"semibold"}>
           Welcome, {user.userName}
         </Text>
-        <Button size={"lg"}>Logout</Button>
+        <Button
+          size={"lg"}
+          onClick={() => {
+            window.open("http://localhost:3001/auth/logout", "_self");
+          }}
+        >
+          Logout
+        </Button>
       </Flex>
       <Flex width={"100%"} alignItems={"center"} justifyContent={"center"}>
         <Flex width={"70%"} marginTop={"2%"}>
